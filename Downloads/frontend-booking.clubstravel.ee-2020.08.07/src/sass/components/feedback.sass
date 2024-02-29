@@ -1,0 +1,57 @@
+.feedback
+  background-color: $blue
+  background-size: cover
+  background-position: center
+  color: white
+  position: relative
+  .section-header
+    padding-top: 32px
+  .section-subtitle
+    color: white
+  .bg-overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(#082C63, .8)
+  a
+    color: white
+    text-decoration: none
+  .icon
+    font-size: $unit / 2
+  &-divider
+    position: relative
+    text-align: center
+    &::before, &::after
+      position: absolute
+      content: ''
+      display: block
+      border-top: 1px solid rgba(white, .1)
+      width: 80px
+      top: 50%
+      transform: translateY(-50%)
+    &::before
+      left: calc(50% - 110px)
+    &::after
+      right: calc(50% - 110px)
+    &-text
+      &::before
+        font-size: 0.875rem
+        line-height: 1
+        content: attr(data-text)
+  &-block
+    padding: 32px 0
+
+  .operator
+    margin-top: $unit / 3
+    &-link
+      color: white
+      .icon
+        color: rgba(white, .5)
+
+  .btn
+    margin-top: 32px
+
+  .feedback-block:nth-child(1)
+    text-align: center

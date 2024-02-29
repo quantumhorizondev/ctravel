@@ -1,0 +1,53 @@
+.offer-card
+  position: relative
+  transition: .5s ease
+  &.is-direction
+      .offer-card-img
+          height: 160px
+  &-img
+    height: 250px
+    position: relative
+    img
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+      width: 100%
+      height: 100%
+      object-fit: cover
+    .tags
+      position: absolute
+      bottom: 14px
+      left: 14px
+      li + li
+        margin-top: $unit / 6
+  &-content
+    padding: $unit / 3
+    .icon
+      font-size: 24px
+  &-label
+    display: inline-flex
+    &-zigzag
+      width: 3px
+    &-text
+      color: white
+      padding: 4px 12px
+      background: $primary
+    &.is-fixed
+      z-index: 1
+      top: 30px
+      right: 0
+      position: absolute
+    &.mr-n16
+      margin-right: -16px
+  &-dates
+    background: #F7F7F7
+    padding: rem(12) rem(16)
+    margin:
+      left: -16px
+      right: -16px
+    .icon
+      color: #B2B2B2
+    ul
+      li + li
+        margin-top: rem(6)
+  &:hover
+    transform: scale(1.01)

@@ -1,0 +1,168 @@
+.main-search
+    background: #FFFFFF
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+    &-header
+        text-align: center
+        padding: 15px
+    &-filters
+        padding: 15px
+        .active-filters
+        border-top: 1px solid #E6E6E6
+    &-form
+        background: linear-gradient(180deg, #FCCB04 0%, #EE901B 100%)
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15)
+        padding: $unit / 2 15px
+    &-inputs
+        background: white
+        border-radius: $border
+        .dropdown
+            display: block
+            margin-left: 0
+            &:not(:last-child)
+                border-bottom: 1px solid #E2E2E2
+            &-trigger
+                > .field
+                    padding-top: rem(12)
+                    .label
+                        margin-bottom: 0
+                    .control
+                        input
+                            border: none !important
+                            box-shadow: none !important
+    &-btn
+        background: $green
+        border-radius: 0
+        border-bottom-left-radius: 6px
+        border-bottom-right-radius: 6px
+        height: 48px
+        width: 100%
+        &:hover
+            background: darken($green, 5)
+        .icon
+            font-size: 1rem
+            margin-right: 4px
+
+.filters-btn
+    user-select: none
+    cursor: pointer
+    min-height: 30px
+    .icon
+        font-size: 20px
+        margin-right: 6px
+    &:hover
+        color: $green !important
+    .line
+        flex: 1
+        border-top: 1px solid #E6E6E6
+        margin: 0 $unit / 2
+    &:not(.is-active)
+        .line
+            display: none
+        .filters-btn-close-label
+            display: none !important
+    &.is-active
+        .filters-btn-main-label
+            font-size: rem(18)
+            color: $text
+        .icon
+            display: none !important
+
+.filters
+    &:not(.is-active)
+        display: none
+    &-group
+        &-name
+            font-size: 0.875rem
+            font-weight: bold
+            margin-bottom: $unit / 3
+            color: #000000
+        ul
+            display: grid
+            grid-gap: $unit / 4
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+
+.filters-prop
+    font-size: 0.875rem
+    display: inline-flex
+    align-items: start
+    user-select: none
+    cursor: pointer
+    .icon-star + .icon-star
+        margin-left: rem(4)
+    &:hover
+        color: #000
+        .icon
+            color: #a7a7a7
+            .icon-star
+                color: darken(#FFE489, 10)
+    .icon
+        flex-shrink: 0
+        margin-right: $unit / 8
+        color: #CECECE
+        font-size: 1rem
+    > .icon
+        transform: translateY(3px)
+    .icon-star
+        color: #FFE489
+        margin-right: 0
+    input
+        display: none
+    input[type="checkbox"]:checked + .icon, input[type="radio"]:checked + .icon
+        color: $primary
+        .icon
+            color: $primary
+        .icon-star
+            color: #F5C213
+
+.active-filters-group
+    margin-left: -8px
+
+.filter-tag
+    font-size: rem(12)
+    border: 1px solid #E2E2E2
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1)
+    padding: 3px 12px
+    border-radius: $border
+
+.search-results
+    .hotel-card
+        &:not(:last-child)
+            margin-bottom: rem(48)
+        @media screen and (min-width: 992px)
+            margin-bottom: rem(40)
+            padding-bottom: rem(40)
+            border-bottom: 1px solid #E6E6E6
+
+@media screen and ( min-width: 992px )
+    .main-search
+        border-radius: 10px
+        margin-left: auto
+        margin-right: auto
+        width: 100%
+        max-width: 1170px
+        margin-top: -104px
+        position: relative
+        z-index: 5
+        &-header, &-filters
+            text-align: left
+            padding:  15px 32px
+        &-form
+            padding: $unit / 3 32px
+        &-inputs
+            box-shadow: 0px 5px 15px rgba(71, 12, 12, 0.1)
+            display: flex
+            > div
+                flex: 1
+            .dropdown
+                .field
+                    .label
+                        color: #C0C0C0
+                &:not(:last-child)
+                    border-bottom: none
+                    border-right: 1px solid #E2E2E2
+        &-btn
+            border-radius: 0
+            border-top-right-radius: 6px
+            border-bottom-right-radius: 6px
+            width: 170px
+            height: 73px

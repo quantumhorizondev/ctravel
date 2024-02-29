@@ -1,0 +1,30 @@
+.cover-slider
+  height: 250px
+  background: grey
+  &-item
+    height: 250px
+    object-fit: cover
+  .cover-slider-bottom-decoration
+    display: none
+
+
+@media screen and ( min-width: 992px )
+  .cover-slider
+    height: 250px
+    position: relative
+    &.is-large
+      height: 55vh
+    .cover-slider-bottom-decoration
+      display: block
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 100%
+      max-width: 1466px
+      margin-bottom: -1px
+    &-item
+      height: 250px
+    &.is-large
+      .cover-slider-item
+        height: 55vh

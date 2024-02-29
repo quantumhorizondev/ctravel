@@ -1,0 +1,20 @@
+$text-sizes: 12, 14, 16, 18, 20, 24, 36
+
+@each $size in $text-sizes
+    .text-is-#{$size}
+        font-size: rem($size) !important
+
+@each $name, $color in $text-colors
+    .text-is-#{$name}
+        color: $color !important
+
+@import 'spacing.scss'
+
+.text-is-center
+    text-align: center
+
+.text-is-line-through
+    text-decoration-line: line-through
+
+.text-is-bold
+    font-weight: bold !important

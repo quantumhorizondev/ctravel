@@ -1,0 +1,243 @@
+@media screen and ( min-width: 1200px )
+    .mobile-content
+        display: none
+    .header
+        &-top
+            padding: 4px 0
+            height: 40px
+            &-block
+                padding: 0
+                margin: 0
+                display: flex
+                position: relative
+                &::before
+                    position: absolute
+                    content: ''
+                    left: 0
+                    height: 24px
+                    border-left: 1px solid #F2F2F2
+                    display: none
+                &:not(:first-child)
+                    &::before
+                        display: block
+                li
+                    display: inline-flex
+                    a
+                        color: #666666
+                        &:hover
+                            color: #1A1A1A
+                        &.is-active
+                            color: $primary
+            .lang-btn-icon
+                width: 24px
+                height: 24px
+                border-radius: 24px
+        .main-nav
+            border-top: 1px solid #F2F2F2
+        .logo
+            left: 0
+            transform: translateX(0)
+            .logo-img
+                img
+                    width: $unit * 1.7
+                &::before
+                    width: $unit * 2.29 * 1.7
+                    height: $unit * 2.08 * 1.7
+        &-desktop-nav
+            display: block
+            height: 60px
+            background: white
+            .container
+                display: flex
+                justify-content: flex-end
+            ul, ol
+                display: flex
+            li
+                .icon
+                    font-size: $unit / 2
+                &.is-accent
+                    color: $red
+                    font-weight: bold
+                    a
+                        color: $red
+                    .icon
+                        color: $red
+                + li
+                    margin-left: $unit / 2
+                a
+                    height: 60px
+                    position: relative
+                    overflow: hidden
+                    transition: .2s ease
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    .icon
+                        margin-right: $unit / 12
+                        // line-height: 60px
+                    &::before
+                        content: ''
+                        position: absolute
+                        width: $unit
+                        height: 2px
+                        background: $primary
+                        top: 100%
+
+                        left: 50%
+                        transform: translateX(-50%)
+                        transition: .2s ease
+                    &:hover, &.is-active
+                        color: $primary
+                        text-decoration: none
+                        .icon
+                            color: $primary
+                        &::before
+                            top: calc( 100% - 2px )
+    
+    
+@media screen and ( min-width: 992px )
+    .section
+        &.has-margin-top
+            margin-top: 100px
+        &-title
+            text-align: center
+            line-height: 35pxf
+            .icon
+                font-size: 35px
+                display: inline-block
+                margin-bottom: 0
+
+    .slider-arrow
+        box-shadow: none
+        background: rgba($green, .1)
+        transition: .2s ease
+        .icon
+            color: rgba($green, .5)
+        &:hover
+            background: rgba($green, .2)
+            .icon
+                color: rgba($green, 1)
+
+    .feedback
+        &-divider
+            position: absolute
+        .section-header
+            padding-top: 80px
+        &-blocks
+            display: flex
+            align-items: center
+        &-block
+            flex: 1
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: calc( 80px - 25px )
+            margin-bottom: 80px
+        &-form
+            max-width: 380px
+        &-divider
+            left: 50%
+            transform: translateX(-50%) rotate(90deg)
+            &-text::before
+                display: block
+                transform: rotate(-90deg)
+        &-operator
+            padding-left: $unit / 2
+        .operator
+            line-height: 1
+            &-header-subtitle
+                margin-top: $unit / 6
+            &-image
+                max-width: 210px
+            &-links
+                li + li
+                    margin-top: $unit / 6
+
+    .operator
+        display: flex
+        flex-wrap: wrap
+        align-items: start
+        &-image
+            margin: 0
+            margin-right: 32px
+
+
+    
+   
+    .filters-btn
+        cursor: pointer
+        &:hover
+            color: $green
+
+    .auth
+        &-box
+            padding: 32px
+        &-controls
+            display: flex
+            flex-direction: row-reverse
+            margin:
+                left: -$unit / 4
+                right: -$unit / 4
+            .btn
+                margin: 0 $unit / 4
+
+    .active-filters
+        border-top: 1px solid #E6E6E6
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        &-title
+            color: #888888
+        &-group
+            margin-left: -8px
+            &-name
+                color: #666666
+
+
+    .sidebar-layout
+        position: relative
+        display: flex
+        &.sidebar-layout-reverse
+            .sidebar
+                margin-left: 0
+                margin-right: 70px
+        .content
+            flex: 1
+            max-width: calc( 100% - 440px )
+            position: relative
+            @media screen and (min-width: 1200px)
+                &-divider
+                    position: absolute
+                    right: 20px
+                    top: 50%
+                    transform: translateY(-50%)
+                    text-align: center
+                    display: inline-block
+                    &::before
+                        position: absolute
+                        content: ''
+                        display: block
+                        border-left: 1px solid rgba(#dbdbdb, 1)
+                        height: 260px
+                        left: 50%
+                        top: 50%
+                        transform: translateY(-50%)
+                    &-text
+                        position: relative
+                        display: inline-block
+                        z-index: 2
+                        &::before
+                            padding: 10px 0
+                            background: #fff
+                            transform: rotate(190deg)
+                            font-size: 0.875rem
+                            line-height: 1
+                            content: attr(data-text)
+        .sidebar
+            margin-left: 70px
+            flex-shrink: 0
+            width: 370px
+            &.has-margin-top
+                margin-top: -20px
+            &.has-margin-top-40
+                margin-top: -40px

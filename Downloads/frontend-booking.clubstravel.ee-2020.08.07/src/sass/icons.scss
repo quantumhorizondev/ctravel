@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.woff2') format('woff2'), url('fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+};
+
+.icon, [class^="icon-"], [class*=" icon-"], .taginput a.delete.is-small {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  transition: .2s ease;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+};
+
+.icon-airplane:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-calendar:before {
+  content: "\e902";
+}
+.icon-calendar-euro:before {
+  content: "\e903";
+}
+.icon-check:before {
+  content: "\e904";
+}
+.icon-check-circle:before {
+  content: "\e905";
+}
+.icon-clock:before {
+  content: "\e906";
+}
+.icon-close:before, .close-circle:before, a.delete.is-small:before {
+  content: "\e907";
+}
+.icon-drop-down-solid:before {
+  content: "\e908";
+}
+.icon-exit:before {
+  content: "\e909";
+}
+.icon-fast-time:before {
+  content: "\e90a";
+}
+.icon-food:before {
+  content: "\e90b";
+}
+.icon-house:before {
+  content: "\e90c";
+}
+.icon-list:before {
+  content: "\e90d";
+}
+.icon-lock:before {
+  content: "\e90e";
+}
+.icon-mail:before {
+  content: "\e90f";
+}
+.icon-drop-down:before, .icon.chevron-left:before, .icon.chevron-right:before {
+  content: "\e910";
+}
+.icon-menu:before {
+  content: "\e911";
+}
+.icon-messanger:before {
+  content: "\e912";
+}
+.icon-minus-circle:before, .icon.minus:before {
+  content: "\e913";
+}
+.icon-offer:before {
+  content: "\e914";
+}
+.icon-payment-card:before {
+  content: "\e915";
+}
+.icon-phone:before {
+  content: "\e916";
+}
+.icon-plus-circle:before, .icon.plus:before {
+  content: "\e917";
+}
+.icon-point:before {
+  content: "\e918";
+}
+.icon-search:before {
+  content: "\e919";
+}
+.icon-settings:before {
+  content: "\e91a";
+}
+.icon-star:before {
+  content: "\e91b";
+}
+.icon-sun:before {
+  content: "\e91c";
+}
+.icon-ticket:before {
+  content: "\e91d";
+}
+.icon-user:before {
+  content: "\e91e";
+}
+.icon-zoom:before {
+  content: "\e91f";
+}

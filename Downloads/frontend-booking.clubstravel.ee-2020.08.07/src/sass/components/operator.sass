@@ -1,0 +1,29 @@
+.operator
+    a
+        text-decoration: none
+        color: $text
+    &-image
+        border-radius: $border
+        max-width: 270px
+    &-header
+        &-title
+            font-size: 1.375rem
+        &-subtitle
+            margin-top: 4px
+            font-size: 0.875rem
+    &-links
+        margin: 0
+        margin-top: $unit / 2
+        padding: 0
+        list-style: none
+        li + li
+            margin-top: $unit / 3
+    &-link
+        display: inline-flex
+        align-items: center
+        .icon
+            margin-right: $unit / 4
+    &-label
+        @media (min-width: 768px) and (max-width: 992px)
+            text-align: center
+            

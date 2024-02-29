@@ -1,0 +1,159 @@
+.hotel-card
+    position: relative
+    @media screen and (min-width: 992px)
+        .tags
+            position: static
+        .tag
+            background: white
+            border: 1px solid #E2E2E2
+            color: $text
+            .icon
+                color: rgba($green, .5)
+    &-main
+        @media screen and (min-width: 992px)
+            height: 250px
+    &-slider
+        height: 200px
+        @media screen and (min-width: 992px)
+            width: 300px
+        @media screen and (min-width: 1200px)
+            width: 380px
+        img
+            height: 200px
+            object-fit: cover
+            border-radius: $border
+            @media screen and (min-width: 992px)
+                height: 250px
+        .slider
+            .swiper-container
+                padding: 0
+            &-arrow
+                width: $unit / 2
+                height: $unit / 2
+                background: rgba(#ffffff, .2)
+                box-shadow: none
+                position: absolute
+                top: calc( 50% - 12px )
+                left: 10px
+                &.is-right
+                    right: 10px
+                .icon
+                    color: white
+                    font-size: rem(24)
+
+    &-info
+        @media screen and (max-width: 992px)
+            .tags
+                z-index: 5
+                position: absolute
+                top: 200px - 33px - 14px
+                left: 14px
+        @media screen and (min-width: 992px)
+            flex: 1
+
+    &-desc
+        @media screen and (min-width: 992px)
+            width: 270px
+            &-text
+                max-height: 105px
+                overflow: hidden
+            
+
+    &-props
+        @media screen and (max-width: 768px)
+            &-list
+                > div
+                    width: 50%
+    &-offers
+        .btn
+            min-width: 160px
+        @media screen and (min-width: 992px)
+            width: 200px
+            padding: rem(20)
+            max-width: 200px
+            font-size: 1.125rem
+            display: flex
+            flex-direction: column
+            .text
+                flex: 1
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+            .new-line
+                display: block
+            .price
+                font-size: 1.5rem
+        &.is-clicked
+            background: #F4F6FA
+            box-shadow: none
+            @media screen and (min-width: 992px)
+                position: relative
+                overflow: visible
+                border-bottom-left-radius: 0
+                border-bottom-right-radius: 0
+                &::before
+                    position: absolute
+                    display: block
+                    content: ''
+                    height: 24px
+                    bottom: -24px
+                    left: 0
+                    right: 0
+                    background: #F4F6FA
+    &-table
+        background: #F4F6FA
+        border-radius: 10px 0px 10px 10px
+        @media screen and (min-width: 768px)
+            padding: 0 24px
+        &:not(.is-visible)
+            display: none
+        .table-header
+            border-bottom: none
+            .table-cell
+                padding-bottom: 6px
+                font-weight: normal
+        .table-cell
+            @media screen and (min-width: 768px)
+                &:first-child
+                    padding-left: 0
+                &:last-child
+                    padding-right: 0
+        .table-row
+            &:last-child
+                border-bottom: none
+
+//     &-img
+//         img
+//             height: 200px
+//             object-fit: cover
+//             border-radius: $border
+
+    
+//     &-prop
+//         white-space: nowrap
+
+
+    
+
+// @media screen and ( min-width: 992px )
+//     .hotel-card
+//         &-desc
+//             flex: 1
+//             max-width: 300px
+
+//         &-img
+//             flex: 1
+//             max-width: 380px
+//             position: relative
+//         img
+//             position: absolute
+//             top: 0
+//             bottom: 0
+//             left: 0
+//             right: 0
+//             height: 100%
+//         &-props
+//             flex: 1
+//             max-width: 200px
+//         &-offers

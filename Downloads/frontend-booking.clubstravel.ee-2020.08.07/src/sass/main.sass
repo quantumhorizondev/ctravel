@@ -1,0 +1,24 @@
+@use "sass:map"
+
+@function rem($size)
+    @return $size / 16 * 1rem
+
+$text-colors: ("primary": #F68521,"red": #F15D28,"blue": #255296,"green": #3E7739,"222": #222222, "555": #555555, "888": #888888)
+    
+$primary: map-get($text-colors, "primary")
+$red: map-get($text-colors, "red")
+$blue: map-get($text-colors, "blue")
+$green: map-get($text-colors, "green")
+$text: map-get($text-colors, "222")
+
+$border: 6px
+$unit: 48px
+
+@import 'bootstrap/scss/bootstrap-reboot.scss'
+@import 'bootstrap/scss/bootstrap-grid.scss'
+
+@import 'icons.scss'
+@import 'swiper/swiper.scss'
+@import 'utilities.sass'
+@import 'styles.sass'
+@import 'desktop.sass'

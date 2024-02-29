@@ -1,0 +1,715 @@
+.box
+  background: white
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  transition: box-shadow .2s ease
+  &:hover
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2)
+
+// .input-group
+//   .label
+//     margin:
+//       left: $unit / 3
+//       right: $unit / 3
+//   .input
+//     width: 100% !important
+//     padding: 0
+//     display: flex
+//     align-items: center
+//     height: auto
+//     &:hover
+//       .icon
+//         color: $primary !important
+//     input
+//       flex: 1
+//       white-space: nowrap
+//       overflow: hidden
+//       text-overflow: ellipsis
+//     textarea
+//       width: 100%
+//       max-width: 100%
+//       border: none
+//       min-height: 82px
+//     .icon
+//       flex-shrink: 0
+//       font-size: 24px
+//       color: #A9A9A9
+//       margin-right: $unit / 6
+//     &-text
+//         min-height: 42px
+//         padding: 9px $unit / 2
+//         flex: 1
+//         white-space: nowrap
+//         overflow: hidden
+//         text-overflow: ellipsis
+//         width: 100%
+//   .input-row
+//     margin:
+//       left: -5px
+//       right: -5px
+//     .input
+//       flex: 1
+//     &:not(.is-united)
+//       .input
+//         margin: 0 5px
+//     &.is-united
+//       @media screen and (min-width: 576px)
+//         .input
+//           border-top-right-radius: 0
+//           border-bottom-right-radius: 0
+//         .btn
+//           border-top-left-radius: 0
+//           border-bottom-left-radius: 0
+//           width: auto
+
+
+// .label
+//   font-size: 0.8125rem
+//   line-height: 1
+//   color: #888888
+//   margin-bottom: $unit / 6
+
+// .input
+//   background: #FFFFFF
+//   border: 1px solid #E2E2E2
+//   border-radius: $border
+//   &:focus, &:active
+//     outline: none
+//     border-color: $primary
+
+
+.btn
+  user-select: none
+  cursor: pointer
+  border-radius: $border
+  text-decoration: none
+  background: $primary
+  border: none
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 0 $unit / 4
+  font-family: Open Sans, sans-serif
+  font-size: 0.875rem
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: #FFFFFF
+  min-height: 42px
+  transition: .2s ease
+  transition-property: color, border
+  &:hover
+    color: #fff
+    background: $green
+  &.is-full-width
+    width: 100%
+    display: flex
+  &.is-bordered
+    border: 1px solid $primary
+    background: white
+    color: $text
+    &:hover
+      border-color: $green
+  &.is-small
+    min-height: 26px
+    letter-spacing: normal
+    text-transform: none
+  &:disabled
+    background: rgba($primary, .5)
+
+
+.view-all-link
+  margin-top: 25px
+  color: #555555
+  display: inline-flex
+  justify-content: center
+  text-decoration: none
+  .icon
+    margin-left: $unit / 6
+    font-size: 24px
+    color: $primary
+  &:hover
+    .icon
+      transform: translateX(10px)
+
+
+.divider
+  position: relative
+  text-align: center
+  &::before, &::after
+    position: absolute
+    content: ''
+    display: block
+    border-top: 1px solid #CACACA
+    width: 80px
+    top: 50%
+    transform: translateY(-50%)
+  &::before
+    left: calc(50% - 110px)
+  &::after
+    right: calc(50% - 110px)
+  &-text
+    &::before
+      color: #555
+      font-size: 0.875rem
+      line-height: 1
+      content: attr(data-text)
+
+.input-checkbox
+  display: inline-flex
+  align-items: start
+  user-select: none
+  cursor: pointer
+  &:hover
+    color: #000
+    .icon
+      border-color: #6e6e6e
+  .icon
+    width: rem(24)
+    height: rem(24)
+    border-radius: 4px
+    border: 2px solid #B5B5B5
+    flex-shrink: 0
+    margin-right: $unit / 6
+    color: white
+    font-size: 1rem
+    font-size: rem(20)
+  .icon-star
+    color: #FFE489
+    margin-right: 0
+  input
+    display: none
+  input[type="checkbox"]:checked + .icon, input[type="radio"]:checked + .icon
+    background: $primary
+    border-color: $primary
+
+.tags
+  .tag
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    border-radius: $border
+    background: rgba(black, .5)
+    color: white
+    font-size: 0.875rem
+    padding: $unit / 8 $unit / 3
+    .icon
+      margin-left: -$unit / 6
+      font-size: 1rem
+      margin-right: $unit / 6
+
+.ct-tabs
+  display: block
+  &-header
+    display: flex
+    .ct-tab-title
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      padding: 20px 10px
+      font-size: rem(14)
+      flex: 1
+      background: #F3F3F3
+      color: #8B8B8B
+      &:first-child
+        border-top-left-radius: 10px
+      &:last-child
+        border-top-right-radius: 10px
+      @media screen and (max-width: 575px)
+        font-size: rem(18)
+      &.is-active
+        background: white
+        color: $text
+      &:not(.is-active)
+        @media screen and (max-width: 575px)
+          display: none
+
+
+  &-content
+    .ct-tab:not(.is-active)
+      display: none
+
+
+.input-number
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    input
+        padding:
+            left: 24px
+            right: 24px
+    &-control
+        position: absolute
+        z-index: 1
+        top: 50%
+        transform: translateY(-50%)
+        opacity: .5
+        &:hover
+            opacity: 1
+        &:first-child
+            left: 8px
+        &:last-child
+            right: 8px
+
+
+// buefy moderniz
+.dropdown
+    &:not(.not-w100)
+        .dropdown-menu
+            width: 100%
+    &-item
+        &.is-active
+            background-color: $primary !important
+            &:hover
+                color: white
+    &-trigger
+        width: 100%
+    
+    &.is-calendar
+
+        .dropdown-content
+            padding: 0
+        .is-paddingless
+            padding: 0
+            margin: 0
+.control
+    input
+        height: 100%
+// .dropdown-menu
+//     min-width: 100%
+
+
+.field
+    .label
+        color: #888888
+        font-size: rem(13)
+        margin-left: 1rem
+        font-weight: normal
+.control
+    &.has-icons-left, &.has-icons-right
+        input
+            padding-right: 36px !important
+        .icon
+            color: #A9A9A9
+            height: auto
+            width: auto
+    &.has-icons-left > .icon, &.has-icons-right > .icon
+        top: 50%
+        width: 24px
+        height: 24px
+        right: 8px !important
+        transform: translateY(-50%)
+input, textarea
+    padding-left: 1rem !important
+    padding-right: 1rem !important
+    background: #FFFFFF
+    border: 1px solid #E2E2E2 !important
+    border-radius: $border
+    &:focus, &:active, &:hover
+        box-shadow: 0 0 0 0.125em rgba($primary, 0.15) !important
+        border-color: $primary !important
+        + .icon > .icon
+            color: $primary
+
+.b-numberinput
+    .control
+        margin: 0 !important
+        button
+            background: none
+        &:first-child
+            margin-right: -26px !important
+            z-index: 5
+        &:last-child
+            margin-left: -26px !important
+            z-index: 5
+        .button 
+            border: none
+            margin: 0
+            padding: 6px
+            height: 42px
+            &:disabled
+                opacity: 0.5
+            .icon
+                color: $primary
+                font-size: 14px
+
+.datepicker
+    .datepicker-header
+        border-bottom: 0
+        margin-bottom: 0
+        .pagination
+            > a, > div
+                
+            > a
+                border: 1px solid #e2e2e2
+                width: 36px
+                height: 36px
+                margin: 6px 0 0
+                padding: 0
+                display: flex
+                align-items: center
+                justify-content: center
+                .icon
+                    color: #A9A9A9
+                &:hover
+                    .icon
+                        color: $primary
+            &-list
+                height: 36px
+                padding: 0
+                margin: 6px 6px 0
+                display: flex
+                .field
+                    width: 100%
+                    > .control
+                        &:first-child
+                            width: 60%
+                        &:last-child
+                            width: 40%
+                        .select
+                            height: 36px
+                            width: 100%
+                            &::after
+                                right: 4px
+                            select
+                                border: 1px solid #e2e2e2
+                                display: block
+                                width: 100%
+                                padding: 0 rem(8)
+                                height: 100%
+                                background: none
+                                min-height: auto
+                                font-size: rem(15)
+    &-body
+        a
+            text-decoration: none
+    .icon.chevron-left
+        display: inline-block
+        transform: rotate(90deg)
+
+    .icon.chevron-right
+        display: inline-block
+        transform: rotate(-90deg)
+
+.select:not(.is-multiple):not(.is-loading), .navbar-link:not(.is-arrowless)
+    &:hover, &:focus
+        &::after
+            color: $primary
+    &::after
+        font-family: 'icomoon'
+        margin: 0
+        padding: 0
+        color: black
+        z-index: 5
+        content: "\e910"
+        top: 50%
+        transform: translateY(-50%)
+        border: none
+        border-radius: 0
+        border: none
+        height: auto
+        pointer-events: none
+        position: absolute
+        transform-origin: center
+        width: auto
+        font-size: 24px
+        right: 8px
+        color: #A9A9A9
+
+.guests-table
+    min-width: 240px
+    tr
+        td
+            &:first-child
+                width: 60%
+            &:last-child
+                width: 40%
+    .dropdown
+        width: 100%
+        .control input
+            border-top-right-radius: 0
+            border-botom-right-radius: 0
+    .b-numberinput .control input
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        margin-left: -3px
+
+
+
+.ui-slider
+    .vue-slider-dot-tooltip-top
+        top: -5%
+        font-size: rem(14)
+    .vue-slider-process
+        background: $primary
+    .vue-slider-dot-handle
+        box-shadow: none
+        background: $primary
+    .vue-slider-rail
+        background: #CECECE
+        &::before
+            position: absolute
+            content: ''
+            display: block
+            top: -9px
+            width: 3px
+            height: 20px
+            left: 0
+            background: #CECECE
+        &::after
+            position: absolute
+            content: ''
+            display: block
+            top: -9px
+            width: 3px
+            height: 20px
+            right: 0
+            background: #CECECE
+
+.ui-slider-minmax-range
+    margin-top: 4px
+
+
+.hot-offers-table
+  .btn
+    height: auto
+    min-height: 28px
+    font-size: 12px
+    letter-spacing: normal
+    padding: 6px
+    .icon
+      margin-right: -12px
+    &.is-active
+      .icon
+        transform: rotate(180deg)
+  .table-row
+    > .table-cell
+      @media screen and (min-width: 768px)
+         width: 16.6666667%
+
+         &:nth-child(1)
+             width: 23%
+         &:nth-child(2)
+             width: 14.5%
+         &:nth-child(3)
+             width: 16.5%
+         &:nth-child(4)
+             width: 14.5%
+         &:nth-child(5)
+             width: 11%
+         &:nth-child(6)
+             width: 20.5%
+
+.table
+    font-size: 15px
+    @media screen and (min-width: 768px)
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+    .btn
+        //width: 100%
+
+    .open-btn
+        width: 100%
+        text-align: center
+        color: #F68521
+        text-decoration: underline
+        text-transform: uppercase
+        font-size: 14px
+        cursor: pointer
+        user-select: none
+    &.hot-offers-table
+      > .table-row:not(.is-opened):not(.table-header):hover
+          cursor: pointer
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+    &-row
+        border-bottom: 1px solid #E6E6E6
+        transition: .2s ease
+        @media screen and (min-width: 768px)
+            display: flex
+            flex-wrap: wrap
+        > .table-cell
+            &:not(.hasnt-label)
+                &::before
+                    content: attr(data-label)
+                    font-size: 14px
+                    color: #666666
+                    width: 40%
+                    @media screen and (min-width: 768px)
+                        display: none
+
+            @media screen and (min-width: 768px)
+                flex: 1
+                
+        &.is-opened
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+            @media screen and (min-width: 768px)
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+
+
+    &-cell
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        padding: 5px 15px
+
+        @media screen and (max-width: 768px)
+            &:first-child, &.is-first
+                padding-top: 24px
+            &:last-child, &.is-last
+                padding-bottom: 24px
+                .open-btn, .btn
+                    margin-top: 24px
+
+        @media screen and (min-width: 768px)
+          padding: 22px 8px 22px 0
+          &:first-child, &.is-first
+              padding-left: 24px
+          &:last-child, &.is-last
+              padding-right: 24px
+            
+    &-detail
+        width: 100%
+        @media screen and (max-width: 768px)
+            border-top: 1px solid #E6E6E6
+        &:not(.is-visible)
+            display: none
+        > .table-row
+            @media screen and (min-width: 768px)
+                border-bottom: none
+                position: relative
+                &:not(:last-child)::before
+                    position: absolute
+                    display: block
+                    content: ''
+                    border-bottom: 1px solid #E6E6E6
+                    left: 22px
+                    right: 22px
+                    bottom: 0
+    &-header
+        font-weight: bold
+        @media screen and (max-width: 768px)
+            display: none
+    .hotel-detail
+        position: relative
+        z-index: 1
+        @media screen and (min-width: 768px)
+            margin-bottom: 12px
+        &::before
+            position: absolute
+            background: #F4F6FA
+            display: block
+            content: ''
+            left: -15px
+            right: -15px
+            top: 0
+            bottom: 0
+            z-index: -1
+            @media screen and (min-width: 768px)
+                border-radius: 6px
+                left: 10px
+                right: 10px
+        .table-cell:first-child
+            color: #8B8C8E
+        @media screen and (min-width: 768px)
+            .table-row
+                border-bottom: none
+                position: relative
+                &:not(:last-child)::before
+                   position: absolute
+                   display: block
+                   content: ''
+                   border-bottom: 1px solid #E6E6E6
+                   left: 22px
+                   right: 22px
+                   bottom: 0
+
+.date-offers-title
+  border-bottom: 1px solid #CECECE
+
+.tour-request-form
+  .btn
+    width: 100%
+  @media screen and (min-width: 768px)
+      .control
+        flex: 1
+        input
+          border-bottom-right-radius: 0
+          border-top-right-radius: 0
+      .btn
+        border-bottom-left-radius: 0
+        border-top-left-radius: 0
+        width: auto
+
+.tour-request-main-form
+  .dropdown + .dropdown
+    margin-left: 0
+
+.map-frame
+    height: 395px
+    border-radius: 10px
+    width: 100%
+    border: none
+
+.taginput
+    border: 1px solid #E2E2E2
+    border-radius: 4px
+    &-container
+        outline: none !important
+        border: none !important
+        box-shadow: none !important
+        &:hover, &:focus, &.is-focused
+            outline: none !important
+            border: none !important
+            box-shadow: none !important
+    &:hover, &:focus
+        outline: none
+        border-color: $primary !important
+        box-shadow: 0 0 0 0.125em rgba(246, 133, 33, 0.15)
+    .tag
+        margin-left: .275rem
+        margin-bottom: calc(.275em - 1px)
+        font-size: .9em
+        height: 1.7em
+        align-items: center
+        background-color: #f5f5f5
+        border-radius: 4px
+        color: #4a4a4a
+        display: inline-flex
+        font-size: .75rem
+        height: 2em
+        justify-content: center
+        line-height: 1.5
+        padding-left: .75em
+        padding-right: .75em
+        white-space: nowrap
+        .delete
+            margin-left: .2rem
+            height: 16px
+            max-height: 16px
+            max-width: 16px
+            min-height: 16px
+            min-width: 16px
+            width: 16px
+            background-color: hsla(0,0%,4%,.2)
+            border: none
+            border-radius: 16px
+            cursor: pointer
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            color: #fff
+            font-size: .7rem
+        & .has-ellipsis
+            max-width: 6.9em
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+    .control .control input.input
+        padding: .25rem
+        height: auto
+        border: none !important
+        &:hover, &:focus
+            outline: none !important
+            box-shadow: none !important

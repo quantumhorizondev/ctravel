@@ -1,0 +1,158 @@
+body
+    position: relative
+    min-width: 320px
+    font-size: 1rem
+    line-height: 1.5
+    color: $text
+    font-family: 'Open Sans', sans-serif
+
+html, body
+    height: 100%
+
+::placeholder
+    color: #555555
+
+::-webkit-scrollbar
+    width: $unit / 8
+
+::-webkit-scrollbar-track
+    background: none
+
+::-webkit-scrollbar-thumb
+    background: $primary
+
+::selection
+    color: white
+    background: $primary
+
+hr
+    border: none
+    border-top: 1px solid #E6E6E6
+
+h1, h2, h3, h4, h5, h6
+    margin-bottom: 0
+    font-weight: normal
+
+h1
+    font-weight: bold
+    font-size: 1.625rem
+    line-height: 1.3
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    &.is-big
+        letter-spacing: normal
+        text-transform: none
+
+label, p
+    margin-bottom: 0
+
+a
+    color: $blue
+    text-decoration: underline
+    transition: .2s ease
+    &:hover
+        text-decoration: none
+        color: $primary
+
+img
+    user-select: none
+    display: block
+    width: 100%
+    height: auto
+
+input, textarea, select
+    border: none
+    display: block
+    width: 100%
+    border-radius: $border
+    padding: 9px $unit / 3
+    min-height: 42px
+    font-size: 1rem
+
+ul, ol
+    margin: 0
+    padding: 0
+    &.hasnt-list-style
+        list-style: none
+
+.container
+    position: relative
+    width: 100%
+    max-width: 1200px !important
+    padding:
+        right: 15px
+        left: 15px
+    margin:
+        right: auto
+        left: auto
+
+.icon
+    font-size: $unit / 2
+    &.icon-star
+        color: #F5C213
+    &.is-green
+        color: rgba($green, .5)
+
+.op-05
+    opacity: .5
+
+*[tabindex]:focus
+    outline: none
+
+.section
+    &.has-margin-top
+        margin-top: 80px
+    &-header
+        margin-bottom: 25px
+    &-title
+        text-align: center
+        line-height: 35px
+        .icon
+            font-size: 35px
+            display: flex
+            justify-content: center
+            margin-bottom: $unit / 6
+    &-subtitle
+        font-size: 	0.875rem
+        color: #888888
+        margin-top: $unit / 3
+        text-align: center
+
+@media screen and (max-width: 768px)
+    .directions-page
+        h1
+            font-weight: normal
+            font-size: rem(16)
+            text-transform: none
+            color: #555 !important
+            letter-spacing: normal
+
+.has-blue-bg
+    background-color: $blue
+    background-size: cover
+    background-position: center
+    position: relative
+    .bg-overlay
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(#082C63, .8)
+
+@import "components/ui"
+@import "components/header"
+@import 'components/mobile-menu'
+@import "components/footer"
+@import "components/search"
+@import "components/offer-card"
+@import "components/hotel-card"
+@import "components/hotel-page"
+@import "components/feedback"
+@import "components/cover"
+@import "components/auth"
+@import "components/404"
+@import "components/slider"
+@import "components/operator"
+@import "components/offers-calendar"
+@import "components/profile-page"
